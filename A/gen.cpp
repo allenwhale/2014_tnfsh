@@ -2,9 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 int main(int a,char **b)
 {
-	srand(time(0));
+	srand(time(0)+getpid());
 	int S,Q;
 	sscanf(b[1],"%d",&S);
 	sscanf(b[2],"%d",&Q);
