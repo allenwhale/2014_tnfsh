@@ -1,0 +1,74 @@
+﻿<style>
+.mid{
+    text-align:center;
+}
+.mainp{
+	text-indent: 2em;
+}
+.tablemid{
+	margin-left:auto; 
+	margin-right:auto;
+}     
+</style>
+<script src="/~allenwhale/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax:{
+			inlineMath:[['$','$'],['\\((','\\(']]
+		}
+	});
+</script>
+<meta charset="utf-8">
+
+<center>
+    <h1>B 出征的準備</h1>
+	2014 全國資訊能力競賽模擬賽 
+</center>
+<p>
+</p><h3>題目敘述</h3>
+<p class="mainp">
+全國賽的時間快到了，身為社長的$Domen$要開始思考要帶哪些武器北上出征了，但是因為$5$個人能帶的東西重量有限，所以需要$Domen$好好的規劃一下。
+</p>
+<p class="mainp">
+他們已經把想要帶的武器都列了出來(例如: $AirPen$、延長線、網路線......)，每樣武器都有自己的重量和殺傷力，不過這些武器有一個很特殊的地方，他們都可以以任意比例進行切割，但是同時殺傷力也會被依照比例分散掉(例如: 網路線重$12kg$、殺傷力為$24$單位，如果把網路線分成$3kg$、$9kg$，那殺傷力也會被分成$6$單位、$18$單位)，為了要在全國賽拿到最好的成績，所以他們希望在有限的重量內，組合出最大的殺傷力。
+</p>
+<p class="mainp">
+但是$Domen$要準備全國賽太忙了，所以就把任務丟給你了。
+</p>
+<h3>輸入說明</h3>
+<p class="mainp">
+輸入的第一行有兩個整數$N, V$(代表有$N$種武器，他們最多可以帶$V\  kg$的武器組合)，接下來會有$N$行，每行有兩個整數$X_{i}, W_{i}$(代表第$i$個武器的殺傷力為$X_{i}$，重量為$W_{i}$)。
+</p>
+<br>
+<p class="mainp">在所有測試中保證：<br>
+<ul>
+    <li>$0 < N \leq 10000$</li>
+	<li>$0 < X_{i} \leq 1000$</li>
+	<li>$0 < W_{i} \leq 1000$</li>
+	<li>$0 < V \leq 10000$</li>
+</ul>
+</p>
+<br>
+<h3>輸出說明</h3>
+<p class="mainp">
+輸出最大的殺傷力到小數點後三位。
+</p>
+
+<h3>範例輸入</h3>
+<pre>
+</pre>
+<h3>範例輸出</h3>
+<pre>
+</pre>
+<h3>配分方法</h3>
+<ul>
+	<li>$10\%~~~~N \leq 10，V \leq 1000$</li>
+	<li>$10\%~~~~N \leq 100，V \leq 10000$</li>
+    <li>$10\%~~~~N \leq 500，V \leq 50000$</li>
+	<li>$20\%~~~~N \leq 1000，V \leq 100000$</li>
+	<li>$50\%~~~~N \leq 10000，V \leq 1000000$</li>
+</ul>
+
+<footer>
+By allenwhale <time>2014.12</time> 
+</footer>

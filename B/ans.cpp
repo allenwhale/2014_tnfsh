@@ -13,7 +13,7 @@ struct obj
     }
     bool operator < (const obj& n)const
     {
-        return n.w/n.p>w/p;
+        return n.w/n.p<w/p;
     }
 }o[10010];
 int main()
