@@ -1,0 +1,73 @@
+﻿<style>
+.mid{
+    text-align:center;
+}
+.mainp{
+	text-indent: 2em;
+}
+.tablemid{
+	margin-left:auto; 
+	margin-right:auto;
+}     
+</style>
+<script src="/~allenwhale/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax:{
+			inlineMath:[['$','$'],['\\((','\\(']]
+		}
+	});
+</script>
+<meta charset="utf-8">
+
+<center>
+    <h1>D 奇妙的占卜</h1>
+	2014 全國資訊能力競賽模擬賽 
+</center>
+<p>
+</p><h3>題目敘述</h3>
+<p class="mainp">
+$LFsWang$某天心血來潮想要預測一下今年的全國賽誰會脫穎而出，經過$Google$大神的指點，他獲得一項新技能---簡單多邊形占卜術。
+</p>
+<p class="mainp">
+顧名思義，簡單多邊形占卜術需要先在紙上畫出一個簡單多邊形，接下來在指上隨便戳一點，如果這個點在這個簡單多邊形內，那就是大吉，如果在邊上，就是普普普普，如果在外面，則是大凶。
+</p>
+<p class="mainp">
+但是$LFsWang$不想做這種麻煩事，所以他請你寫個程式幫他占卜。
+</p>
+<h3>輸入說明</h3>
+<p class="mainp">
+輸入的第一行有一個整數$N$(代表這個簡單多邊形有$N$個頂點)，接下來的$N$行每行都有兩個整數$x_{i}$,$y_{i}$(代表第$i$個點的座標)，座標按照順時鐘或逆時鐘的順序給出。接下來的有一個整數$Q$(代表有$Q$個人需要占卜),再來的$Q$行每行都有兩個整數$q_{x_{i}}$,$q_{y_{i}}$(代表第i個人代表的座標)。
+</p>
+<br>
+<p class="mainp">在所有測試中保證：<br>
+<ul>
+    <li>$2 < N \leq 100$</li>
+	<li>$0 < Q \leq 1000$</li>
+	<li>$|座標| \leq 1000$</li>
+</ul>
+</p>
+<br>
+<h3>輸出說明</h3>
+<p class="mainp">
+輸出每個人的占卜結果，若是大吉，輸出$"good"$,普普輸出$"soso"$,若是大凶則輸出$"bad"$。
+</p>
+
+<h3>範例輸入</h3>
+<pre>
+</pre>
+<h3>範例輸出</h3>
+<pre>
+</pre>
+<h3>配分方法</h3>
+<ul>
+	<li>$10\%~~~~N \eq 3，|S| \leq 10$</li>
+	<li>$10\%~~~~N \leq 4，|S| \leq 50$</li>
+    <li>$10\%~~~~N \leq 10，|S| \leq 100$</li>
+	<li>$20\%~~~~N \leq 50，|S| \leq 500$</li>
+	<li>$50\%~~~~N \leq 100，|S| \leq 1000$</li>
+</ul>
+
+<footer>
+By allenwhale <time>2014.12</time> 
+</footer>
