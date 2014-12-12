@@ -1,0 +1,97 @@
+﻿<style>
+.mid{
+    text-align:center;
+}
+.mainp{
+	text-indent: 2em;
+}
+.tablemid{
+	margin-left:auto; 
+	margin-right:auto;
+}     
+</style>
+<script src="/~allenwhale/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax:{
+			inlineMath:[['$','$'],['\\((','\\(']]
+		}
+	});
+</script>
+<meta charset="utf-8">
+
+<center>
+    <h1>G 出征的難題</h1>
+	2014 全國資訊能力競賽模擬賽 
+</center>
+<p>
+</p><h3>題目敘述</h3>
+<p class="mainp">
+某個星期六早上，$TFcis$一行人前往新竹。由於東北季風加上沙塵暴的影響，台灣北部在冬季時空氣十分不好，因此交通大學幫所以參賽同學準備一個氧氣筒，但是因為氧氣筒有最大容量的限制，所以在所有地點設置氧氣筒充氣站，每次充氣都會把氧氣筒充到滿。而且每個地點之間會因為汙染程度不同，會消耗不同的氧氣量。當然，如果氧氣同在兩個地點之間空掉(在路上消耗光)人是有一定的機率死掉，所以$TFcis$一行人是不會冒險的。
+</p>
+<p class="mainp">
+因為每一次充氣都需要一定的金額，所以$TFcis$一行人希望在外出前計算出最少的消費。
+<br />
+<strong>注意: 每次出門前氧氣筒都是滿的。</strong>
+</p>
+<h3>輸入說明</h3>
+<p class="mainp">
+輸入的第一行有三個整數$N$,$M$,$S$(代表總共有$N$個地點，$M$條路徑，氧氣筒的最大容量為$S$單位)接下來M行都有3個整數$a_{i}$,$b_{i}$,$w_{i}$(代表從$a_{i}$到$b_{i}$需要消耗$w_{i}$單位氧氣)。接下來有一個整數$Q$(代表接下來$Q$個詢問)，再來的$Q$行都有兩個整數$q_{a_{i}}$,$q_{b_{i}}$(代表第$i$次想詢問$q_{a_{i}}$,$q_{b_{i}}$間的最少充氣次數)。
+</p>
+<br>
+<p class="mainp">在所有測試中保證：<br>
+<ul>
+    <li>$10 < N \leq 1000$</li>
+	<li>$0 < M \leq N^{2}$</li>
+	<li>$0 < S \leq 1000*N$</li>
+	<li>$0 \leq a_{i}, b_{i} \lt N$</li>
+	<li>$0 < w_{i} \leq 100$</li>
+	<li>$0 < Q \leq N^{2}$</li>
+</ul>
+</p>
+<br>
+<h3>輸出說明</h3>
+<p class="mainp">
+對每筆詢問輸出從$q_{a_{i}}$到$q_{b_{i}}$最少要充氣幾次。
+</p>
+
+<h3>範例輸入</h3>
+<pre>
+10 10 10
+5 9 5
+2 3 4
+1 2 7
+1 0 2
+3 9 7
+4 5 6
+5 7 6
+5 6 2
+8 3 8
+9 2 5
+5
+1 2
+3 4
+5 6
+7 8
+0 9
+</pre>
+<h3>範例輸出</h3>
+<pre>
+1
+3
+1
+4
+2
+</pre>
+<h3>配分方法</h3>
+<ul>
+	<li>$10\%~~~~N \leq 5$</li>
+	<li>$10\%~~~~N \leq 10$</li>
+    <li>$10\%~~~~N \leq 20$</li>
+	<li>$20\%~~~~N \leq 50$</li>
+	<li>$50\%~~~~N \leq 100$</li>
+</ul>
+
+<footer>
+By allenwhale <time>2014.12</time> 
+</footer>
