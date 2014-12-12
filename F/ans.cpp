@@ -12,55 +12,55 @@ map<pair<int,int>,int>mp2;
 int sn1=0,sn2=0;
 int find1(int x)
 {
-    if(mp1.find(x)==mp1.end())mp1[x]=sn1++;
-    return mp1[x];
+	if(mp1.find(x)==mp1.end())mp1[x]=sn1++;
+	return mp1[x];
 }
 int find2(pair<int,int> x)
 {
-    if(mp2.find(x)==mp2.end())mp2[x]=sn2++;
-    return mp2[x];
+	if(mp2.find(x)==mp2.end())mp2[x]=sn2++;
+	return mp2[x];
 }
 int gcd(int a,int b)
 {
-    while((a%=b)&&(b%=a));
-    return a+b;
+	while((a%=b)&&(b%=a));
+	return a+b;
 }
 bool match(int x)
 {
-    if(vis[x])return false;
-    vis[x]=true;
-    for(int &y:vc[x])
-    {
-	if(my[y]==-1||match(my[y]))
+	if(vis[x])return false;
+	vis[x]=true;
+	for(int &y:vc[x])
 	{
-	    my[y]=x;mx[x]=y;
-	    return true;
+		if(my[y]==-1||match(my[y]))
+		{
+			my[y]=x;mx[x]=y;
+			return true;
+		}
 	}
-    }
-    return false;
+	return false;
 }
 int main()
 {
-    int N;
-    scanf("%d",&N);
-    for(int i=0;i<N;i++)
-    {
-	scanf("%d %d",&px[i],&py[i]);
-	int d=gcd(px[i],py[i]);
-	int tx=px[i]/d,ty=py[i]/d;
-	vc[find1(px[i]+py[i])].push_back(find2(make_pair(tx,ty)));
-    }
-    memset(mx,-1,sizeof(mx));
-    memset(my,-1,sizeof(my));
-    int ans=0;
-    for(int i=0;i<sn1;i++)
-    {
-	if(mx[i]==-1)
+	int N;
+	scanf("%d",&N);
+	for(int i=0;i<N;i++)
 	{
-	    memset(vis,false,sizeof(vis));
-	    if(match(i))ans++;
+		scanf("%d %d",&px[i],&py[i]);
+		int d=gcd(px[i],py[i]);
+		int tx=px[i]/d,ty=py[i]/d;
+		vc[find1(px[i]+py[i])].push_back(find2(make_pair(tx,ty)));
 	}
-    }
-    printf("%d\n",ans);
-    return 0;
+	memset(mx,-1,sizeof(mx));
+	memset(my,-1,sizeof(my));
+	int ans=0;
+	for(int i=0;i<sn1;i++)
+	{
+		if(mx[i]==-1)
+		{
+			memset(vis,false,sizeof(vis));
+			if(match(i))ans++;
+		}
+	}
+	printf("%d\n",ans);
+	return 0;
 }
