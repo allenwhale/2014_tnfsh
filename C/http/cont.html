@@ -1,0 +1,82 @@
+﻿<style>
+.mid{
+    text-align:center;
+}
+.mainp{
+	text-indent: 2em;
+}
+.tablemid{
+	margin-left:auto; 
+	margin-right:auto;
+}     
+</style>
+<script src="/~allenwhale/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax:{
+			inlineMath:[['$','$'],['\\((','\\(']]
+		}
+	});
+</script>
+<meta charset="utf-8">
+
+<center>
+    <h1>C 情報的蒐集</h1>
+	2014 全國資訊能力競賽模擬賽 
+</center>
+<p>
+</p><h3>題目敘述</h3>
+<p class="mainp">
+俗話說:"知己知彼，百戰百勝。"為了要更了解敵人的弱點，$JD3$利用空閒時間收集了敵人的資料，但是$JD3$的情蒐能力實在太強大，蒐集到太多資料了，他只好把資料分類。雖然經過分類，但訊息量還是太過龐大，讓大家都很苦惱，沒辦法在第一時間判斷自己想要的訊息是否在該份資料內，所以大家希望有一個良好的搜尋工具。
+</p>
+<p class="mainp">
+他們在判斷該份資料內是否有自己想要的訊息有一個特別的規則:不考慮英文字母外的任何符號，而且大小寫視為相同。例如:資料=$"abc123 c"$，想要的訊息=$"bcc"$，那麼這份資料就是想要的資料。
+</p>
+<p class="mainp">
+但是$JD3$也要準備全國賽，所以請你幫大家寫一個判斷的程式。
+</p>
+<h3>輸入說明</h3>
+<p class="mainp">
+每筆測試資料會有多組輸入。每組輸入包含兩行，第一行有一字串T(代表資料)，第二行有一字串P(代表想要的資料)。
+</p>
+<br>
+<p class="mainp">在所有測試中保證：<br>
+<ul>
+    <li>$0 < 測試資料組數 \leq 10$</li>
+    <li>$0 < |T| \leq 100000$</li>
+	<li>$0 < |P| \leq 10000$</li>
+</ul>
+</p>
+<br>
+<h3>輸出說明</h3>
+<p class="mainp">
+對每組輸入判斷，是否為想要的資料，若是請輸出"Yes"，反之則輸出"No"。
+</p>
+
+<h3>範例輸入</h3>
+<pre>
+abc cbs
+cc
+AbDVr $3d1d  
+abDDb
+hello, world !!
+owo!!
+</pre>
+<h3>範例輸出</h3>
+<pre>
+Yes
+No
+Yes
+</pre>
+<h3>配分方法</h3>
+<ul>
+	<li>$10\%~~~~|T| \leq 100，|S| \leq 10$</li>
+	<li>$10\%~~~~|T| \leq 500，|S| \leq 100$</li>
+    <li>$10\%~~~~|T| \leq 1000，|S| \leq 100$</li>
+	<li>$20\%~~~~|T| \leq 10000，|S| \leq 1000$</li>
+	<li>$50\%~~~~|T| \leq 100000，|S| \leq 10000$</li>
+</ul>
+
+<footer>
+By allenwhale <time>2014.12</time> 
+</footer>

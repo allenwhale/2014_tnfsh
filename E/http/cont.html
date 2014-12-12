@@ -1,0 +1,82 @@
+﻿<style>
+.mid{
+    text-align:center;
+}
+.mainp{
+	text-indent: 2em;
+}
+.tablemid{
+	margin-left:auto; 
+	margin-right:auto;
+}     
+</style>
+<script src="/~allenwhale/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax:{
+			inlineMath:[['$','$'],['\\((','\\(']]
+		}
+	});
+</script>
+<meta charset="utf-8">
+
+<center>
+    <h1>E 輕鬆的遊戲</h1>
+	2014 全國資訊能力競賽模擬賽 
+</center>
+<p>
+</p><h3>題目敘述</h3>
+<p class="mainp">
+一直準備全國賽也是很累的事，所以大家上網買了一副五子棋來輕鬆一下。幾天過後，五子棋寄到了社部，打開後發現裡面除了一副五子棋，還有一堆古老的棋譜。既然都要玩五子棋，不如順便增進一下五子棋的技術。
+</p>
+<p class="mainp">
+但是這些棋譜實在太古老太簡陋了，還有些棋譜是錯誤的，因此大家想請閒閒的學弟幫他們寫一個判斷的程式。
+</p>
+<p class="mainp">
+每一份棋譜的一開始都有一個數字代表這盤棋下了幾步，接下來依序以座標表示下的位置。判斷的要求很簡單，只有四種回答:先手贏、後手贏、尚未結束、棋譜有誤。<br /><br />但是有些地方需要注意:
+<ul>
+	<li>每一份棋譜只要有一個人贏了，就直接結束，不論還有幾步棋沒有下完。</li>
+	<li>如果下到已經有棋子的就是棋譜有誤，並直接結束。</li>
+	<li>如果到最後沒有分出勝負也沒有錯誤就是尚未結束。</li>
+</ul>
+</p>
+<h3>輸入說明</h3>
+<p class="mainp">
+每組測資包含多筆輸入。
+</p>
+<p class="mainp">
+每筆輸入的第一行有一個整數$N$(代表棋盤的大小)，第二行有一個整數$Steps$(代表棋譜的步數)，接下來的$Steps$行都有兩個整數$x_{i}$,$y_{i}$(代表第$i$步下的位置)。
+</p>
+<br>
+<p class="mainp">在所有測試中保證：<br>
+<ul>
+	<li>$測資筆數 \leq 10 $</li>
+    <li>$10 < N \leq 1000$</li>
+	<li>$0 < Steps \leq N^{2}$</li>
+	<li>$0 \leq x_{i}, y_{i} \lt N$</li>
+</ul>
+</p>
+<br>
+<h3>輸出說明</h3>
+<p class="mainp">
+對每份棋譜輸出對應的結果。先手贏輸出$"A\ wins"$，後手贏輸出$"B\ wins"$，尚未結束輸出$"not\ yet"$，若棋譜有誤則輸出$"invalid"$。
+</p>
+
+<h3>範例輸入</h3>
+<pre>
+</pre>
+<h3>範例輸出</h3>
+<pre>
+</pre>
+<h3>配分方法</h3>
+<ul>
+	<li>$10\%~~~~N \leq 10$</li>
+	<li>$10\%~~~~N \leq 50$</li>
+    <li>$10\%~~~~N \leq 100$</li>
+	<li>$20\%~~~~N \leq 500$</li>
+	<li>$50\%~~~~N \leq 1000$</li>
+</ul>
+
+<footer>
+By allenwhale <time>2014.12</time> 
+</footer>

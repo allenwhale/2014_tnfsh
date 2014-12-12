@@ -1,0 +1,101 @@
+﻿<style>
+.mid{
+    text-align:center;
+}
+.mainp{
+	text-indent: 2em;
+}
+.tablemid{
+	margin-left:auto; 
+	margin-right:auto;
+}     
+</style>
+<script src="/~allenwhale/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax:{
+			inlineMath:[['$','$'],['\\((','\\(']]
+		}
+	});
+</script>
+<meta charset="utf-8">
+
+<center>
+    <h1>A 難忘的回憶</h1>
+	2014 全國資訊能力競賽模擬賽 
+</center>
+<p>
+</p><h3>題目敘述</h3>
+<p class="mainp">
+首先，先恭喜$TFcis$的學弟們，今年又有$5$個人進入全國賽，大家要努力一點，看有沒有人可以直接從全國賽進入選訓營。
+</p>
+<p class="mainp">
+接著，進入正題了。還記得從前從前某一次留社考的水題嗎?請參考<a href="http://toj.tfcis.org/oj/pro/16/">$Toj16$</a>。但是題目產生了一點微妙的變化，因此接下來就重新敘述一次題目。
+</p>
+<p class="mainp">
+今天$S$位同學，每位同學都有自己的心情指數$S_{i}$，但是老師有一個特別的癖好，喜歡一次由兩位同學幫她拿東西，而且同學們只會提跟自己心情指數一樣的重量，所以兩個人可以提起的重量就是$S_{i}+S_{j} (i \neq j)$，假如老師的東西為$W$單位重，那麼只有存在$(i,j)$且$(i \neq j)$使得$S_{i}+S_{j} = W$時老師的東西才能被提起(Hint: $S_{i}$ or $S_{j}$可以為$0$)。不過有一個特例，假如存在$i$使得$2*S_{i} = W$，那麼這個東西也可以被提起。
+</p>
+<h3>輸入說明</h3>
+<p class="mainp">
+第一行有一個整數$S$代表學生人數，第二行有$S$個正整數$S_{i}$代表每個學生的心情指數，第三行有一個整數$Q$代表老師$Q$個東西，接下來有$Q$行，每行有一個正整數$W_{i}$代表每個東西的重量。
+</p>
+<br>
+<p class="mainp">在所有測試中保證：<br>
+<ul>
+    <li>$0 < S \leq 100000$</li>
+	<li>$0 < S_{i} \leq 100000$</li>
+    <li>$0 < Q \leq 100000$</li>
+	<li>$0 < W_{i} \leq 200000$</li>
+</ul>
+</p>
+<br>
+<h3>輸出說明</h3>
+<p class="mainp">
+對每個$W_{i}$判斷可不可以被提起。若可以請輸出"yes"，否則輸出"no"。
+</p>
+
+<h3>範例輸入</h3>
+<pre>
+10
+0 2 4 7 9 11 23 6 19 27
+10
+0
+1
+2
+3
+4
+5
+22
+28
+33
+39
+</pre>
+<h3>範例輸出</h3>
+<pre>
+yes
+no
+yes
+no
+yes
+no
+yes
+yes
+yes
+no
+</pre>
+<h3>配分方法</h3>
+<ul>
+	<li>$10\%~~~~S \leq 10，S_{i} \leq S$</li>
+	<li>$10\%~~~~S \leq 100，S_{i} \leq S$</li>
+    <li>$10\%~~~~S \leq 1000，S_{i} \leq S$</li>
+	<li>$20\%~~~~S \leq 15000，S_{i} \leq S$</li>
+	<li>$50\%~~~~S \leq 100000，S_{i} \leq S$</li>
+</ul>
+
+<h3>Hints</h3>
+<p class="mainp">
+有沒有覺得它就是水題阿!!!
+</p>
+<footer>
+By allenwhale <time>2014.12</time> 
+</footer>
