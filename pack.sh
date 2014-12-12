@@ -8,5 +8,5 @@ for i in $all ;do
 	rm -rf "$i/http" > /dev/null
 	mkdir "$i/http"
 	cp "$i/cont.html" "$i/http"
-	tar Jcvf "dist/$i.tar.xz" "$i/res" "$i/http"
+	tar Jcvf "dist/$i.tar.xz" "$i/res" "$i/http" "$i/conf.json"
 done
