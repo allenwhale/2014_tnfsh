@@ -22,7 +22,7 @@ mkdir -p res/testdata
 ./gen 1000 100000 > 19.in
 ./gen 1000 1000000 > 20.in
 echo "input done"
-i=0
+i=1
 while [ "$i" -le 20 ]; do
 	./ans < "$i.in" > "$i.out"
 	echo "$i output done"
